@@ -141,13 +141,7 @@ class ModelResource(View):
         """
         Get a single instance of object
         """
-#        kwargs = self.kwargs
-#        allowed_filters = self._meta.allowed_filters
         filters = {}
-#        supplied_filters = set(allowed_filters) & set(kwargs.keys())
-#        for filter in supplied_filters:
-#            filters[filter] = kwargs[filter]
-
         pk = self.kwargs['pk']
         try:
             return self.get_object(pk, filters)
